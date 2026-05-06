@@ -8,6 +8,64 @@
 
 	<title>LAST GAMBLE ON TON BLOCKCHAIN | LGTB 🏳️‍🌈</title>
 <meta name='robots' content='max-image-preview:large' />
+<style type="text/css">
+/* Selector de idioma */
+.language-selector {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 10000;
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 25px;
+	padding: 10px 20px;
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.language-selector button {
+	background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 8px 16px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+.language-selector button:hover {
+	background: #fff;
+	color: #000;
+	transform: scale(1.05);
+}
+.language-selector button.active {
+	background: #fffaa9;
+	color: #000;
+	border-color: #fffaa9;
+}
+[data-lang], [data-lang-block] {
+	display: none;
+}
+[data-lang].active, [data-lang-block].active {
+	display: inline;
+}
+[data-lang-block].active {
+	display: block;
+}
+@media (max-width: 768px) {
+	.language-selector {
+		top: 10px;
+		right: 10px;
+		padding: 8px 15px;
+		gap: 10px;
+	}
+	.language-selector button {
+		padding: 6px 12px;
+		font-size: 12px;
+	}
+}
+</style>
 <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 <link rel="alternate" type="application/rss+xml" title="Hay &raquo; Feed" href="feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Hay &raquo; Comments Feed" href="comments/feed/index.html" />
@@ -137,7 +195,14 @@ img.emoji {
 	
 </head>
 <body class="home page-template page-template-page-full-width page-template-page-full-width-php page page-id-14 wp-custom-logo qi-blocks-1.2.4 qodef-gutenberg--no-touch qode-framework-1.2.2 qodef-qi--no-touch qi-addons-for-elementor-1.6.3 qodef-back-to-top--enabled  qodef-skin--black qodef--passepartout qodef-header--bottom qodef-header-appearance--none qodef-header-borders--enabled qodef-mobile-header--standard qodef-drop-down-second--full-width qodef-drop-down-second--default eldon-core-1.0.3 eldon-1.3 qodef-content-grid-1400 qodef-header-bottom--center qodef-search--covers-header elementor-default elementor-kit-7 elementor-page elementor-page-14" itemscope itemtype="https://schema.org/WebPage">
-	<a class="skip-link screen-reader-text" href="#qodef-page-content">Skip to the content</a>	<div id="qodef-page-wrapper" class="">
+	
+	<!-- Selector de Idioma -->
+	<div class="language-selector">
+		<button onclick="switchLanguage('en')" id="btn-en" class="active">🇬🇧 EN</button>
+		<button onclick="switchLanguage('ru')" id="btn-ru">🇷🇺 RU</button>
+	</div>
+	
+	<a class="skip-link screen-reader-text" href="#qodef-page-content"><span data-lang="en" class="active">Skip to the content</span><span data-lang="ru">Перейти к содержанию</span></a>	<div id="qodef-page-wrapper" class="">
 		
 		<div id="qodef-slider-holder">
 			
@@ -255,9 +320,9 @@ img.emoji {
 	  sizes="(max-width: 1002px) 100vw, 1002px" /><img width="59" height="58" src="wp-content/uploads/2021/04/logo.png" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image" /><img width="59" height="58" src="wp-content/uploads/2021/04/logo.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image" /></a>
 	</div>
 		<nav class="qodef-header-navigation" role="navigation" aria-label="Top Menu">
-		<ul id="menu-main-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8137"><a href="#about"><span class="qodef-menu-item-text">ABOUT</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8138"><a href="#tokenomics"><span class="qodef-menu-item-text">TOKENOMICS</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8139"><a href="#socials"><span class="qodef-menu-item-text">SOCIALS</span></a></li>
+		<ul id="menu-main-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8137"><a href="#about"><span class="qodef-menu-item-text"><span data-lang="en" class="active">ABOUT</span><span data-lang="ru">О НАС</span></span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8138"><a href="#tokenomics"><span class="qodef-menu-item-text"><span data-lang="en" class="active">TOKENOMICS</span><span data-lang="ru">ТОКЕНОМИКА</span></span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8139"><a href="#socials"><span class="qodef-menu-item-text"><span data-lang="en" class="active">SOCIALS</span><span data-lang="ru">СОЦИАЛЬНЫЕ СЕТИ</span></span></a></li>
 </ul>	</nav>
 	<div class="qodef-widget-holder qodef--one">
 		<div id="eldon_core_switcher-2" class="widget widget_eldon_core_switcher qodef-header-widget-area-one" data-area="header-widget-one">			<div class="widget qodef-switcher" >
@@ -301,9 +366,9 @@ img.emoji {
 		</a>
 	</div>
 		<nav class="qodef-mobile-header-navigation" role="navigation" aria-label="Mobile Menu">
-		<ul id="menu-main-menu-3" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8137"><a href="#about"><span class="qodef-menu-item-text">ABOUT</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8138"><a href="#tokenomics"><span class="qodef-menu-item-text">TOKENOMICS</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8139"><a href="#socials"><span class="qodef-menu-item-text">SOCIALS</span></a></li>
+		<ul id="menu-main-menu-3" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8137"><a href="#about"><span class="qodef-menu-item-text"><span data-lang="en" class="active">ABOUT</span><span data-lang="ru">О НАС</span></span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8138"><a href="#tokenomics"><span class="qodef-menu-item-text"><span data-lang="en" class="active">TOKENOMICS</span><span data-lang="ru">ТОКЕНОМИКА</span></span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8139"><a href="#socials"><span class="qodef-menu-item-text"><span data-lang="en" class="active">SOCIALS</span><span data-lang="ru">СОЦИАЛЬНЫЕ СЕТИ</span></span></a></li>
 </ul>	</nav>
 </header>
 		<div id="qodef-page-outer">
@@ -319,16 +384,19 @@ img.emoji {
 								<div class="elementor-element elementor-element-3f2b27b elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-eldon_core_custom_font" data-id="3f2b27b" data-element_type="widget" data-widget_type="eldon_core_custom_font.default">
 				<div class="elementor-widget-container">
 			<div class="qodef-shortcode qodef-m  qodef-custom-font qodef-custom-font-972 qodef-layout--simple qodef-alignment--left qodef--has-appear" >
-		<h1 class="qodef-custom-font-content" style="font-size: 80px;line-height: 90px"><span class="qodef-animated-text-holder"><span class="qodef-animated-text-original">Introducing</span><span class="qodef-animated-text-duplicate">Introducing</span></span> <span class="qodef-m-emphasized-holder"><span class="qodef-m-title--emphasized">"LAST GAMBLE ON TON BLOCKCHAIN"</span></span></h1>
+		<h1 class="qodef-custom-font-content" style="font-size: 80px;line-height: 90px"><span class="qodef-animated-text-holder"><span class="qodef-animated-text-original"><span data-lang="en" class="active">Introducing</span><span data-lang="ru">Представляем</span></span><span class="qodef-animated-text-duplicate"><span data-lang="en" class="active">Introducing</span><span data-lang="ru">Представляем</span></span></span> <span class="qodef-m-emphasized-holder"><span class="qodef-m-title--emphasized">"LAST GAMBLE ON TON BLOCKCHAIN"</span></span></h1>
 </div>		</div>
 				</div>
 				<div class="elementor-element elementor-element-4c330f5 elementor-widget elementor-widget-qi_addons_for_elementor_highlight" data-id="4c330f5" data-element_type="widget" data-widget_type="qi_addons_for_elementor_highlight.default">
 				<div class="elementor-widget-container">
 			<p class="qodef-shortcode qodef-m  qodef-qi-highlight  qodef-highlight-style--color" >
-	Introducing the <span class="qodef-highlight-text" style="background-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 100%, transparent 100%)">Gay Legacy. In</span> Ton <span class="qodef-highlight-text" style="background-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 100%, transparent 100%)">Blockchain.</span>
+	<span data-lang-block="en" class="active">Introducing the <span class="qodef-highlight-text" style="background-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 100%, transparent 100%)">Gay Legacy. In</span> Ton <span class="qodef-highlight-text" style="background-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 100%, transparent 100%)">Blockchain.</span>
 
 
-</br></br>Gay represents a fresh start. By acknowledging the shortcomings and taking a different path, it aims to rewrite the narrative, creating a more equitable and responsible crypto future. Keep an eye on this token as it endeavors to rectify the past and set a new standard for crypto tokens.</p>
+</br></br>Gay represents a fresh start. By acknowledging the shortcomings and taking a different path, it aims to rewrite the narrative, creating a more equitable and responsible crypto future. Keep an eye on this token as it endeavors to rectify the past and set a new standard for crypto tokens.</span><span data-lang-block="ru">Представляем <span class="qodef-highlight-text" style="background-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 100%, transparent 100%)">Гей-наследие. В</span> Ton <span class="qodef-highlight-text" style="background-image: linear-gradient(to bottom, transparent 0%, #000 0%, #000 100%, transparent 100%)">блокчейне.</span>
+
+
+</br></br>Гей представляет собой новое начало. Признавая недостатки и выбирая другой путь, он стремится переписать историю, создавая более справедливое и ответственное криптовалютное будущее. Следите за этим токеном, поскольку он стремится исправить прошлое и установить новый стандарт для криптовалютных токенов.</span></p>
 		</div>
 				</div>
 					</div>
@@ -354,9 +422,9 @@ img.emoji {
 								<div class="elementor-element elementor-element-4680277 elementor-widget elementor-widget-eldon_core_numbered_text" data-id="4680277" data-element_type="widget" data-widget_type="eldon_core_numbered_text.default">
 				<div class="elementor-widget-container">
 			<div class="qodef-shortcode qodef-m  qodef-numbered-text">
-		<div class="qodef-m-number" style="background-image: url(wp-content/uploads/2021/05/main-h-png7.png)">G</div>
+		<div class="qodef-m-number" style="background-image: url(wp-content/uploads/2021/05/main-h-png7.png)"><span data-lang="en" class="active">G</span><span data-lang="ru">Г</span></div>
 	<div class="qodef-m-content">
-			<h3 class="qodef-m-title" >GET</h3>
+			<h3 class="qodef-m-title" ><span data-lang="en" class="active">GET</span><span data-lang="ru">ГОТОВЬСЯ</span></h3>
 			</div>
 </div>
 		</div>
@@ -368,9 +436,9 @@ img.emoji {
 								<div class="elementor-element elementor-element-088faad elementor-widget elementor-widget-eldon_core_numbered_text" data-id="088faad" data-element_type="widget" data-widget_type="eldon_core_numbered_text.default">
 				<div class="elementor-widget-container">
 			<div class="qodef-shortcode qodef-m  qodef-numbered-text">
-		<div class="qodef-m-number" style="background-image: url(wp-content/uploads/2021/05/main-h-png6.png)">A</div>
+		<div class="qodef-m-number" style="background-image: url(wp-content/uploads/2021/05/main-h-png6.png)"><span data-lang="en" class="active">A</span><span data-lang="ru">Б</span></div>
 	<div class="qodef-m-content">
-			<h3 class="qodef-m-title" >READY</h3>
+			<h3 class="qodef-m-title" ><span data-lang="en" class="active">READY</span><span data-lang="ru">БУДЬ ГОТОВ</span></h3>
 			</div>
 </div>
 		</div>
@@ -382,9 +450,9 @@ img.emoji {
 								<div class="elementor-element elementor-element-e57e744 elementor-widget elementor-widget-eldon_core_numbered_text" data-id="e57e744" data-element_type="widget" data-widget_type="eldon_core_numbered_text.default">
 				<div class="elementor-widget-container">
 			<div class="qodef-shortcode qodef-m  qodef-numbered-text">
-		<div class="qodef-m-number" style="background-image: url(wp-content/uploads/2021/05/main-h-img1.jpg)">Y</div>
+		<div class="qodef-m-number" style="background-image: url(wp-content/uploads/2021/05/main-h-img1.jpg)"><span data-lang="en" class="active">Y</span><span data-lang="ru">В</span></div>
 	<div class="qodef-m-content">
-			<h3 class="qodef-m-title" >Y&#039;ALL</h3>
+			<h3 class="qodef-m-title" ><span data-lang="en" class="active">Y&#039;ALL</span><span data-lang="ru">ВСЕ</span></h3>
 			</div>
 </div>
 		</div>
@@ -400,20 +468,20 @@ img.emoji {
 								<div class="elementor-element elementor-element-f74f84e elementor-widget elementor-widget-eldon_core_info_list" data-id="f74f84e" data-element_type="widget" data-widget_type="eldon_core_info_list.default">
 				<div class="elementor-widget-container">
 			<div class="qodef-shortcode qodef-m  qodef-info-list">
-			<h2 class="qodef-m-info-list-title">Tokenomics</h2>
+			<h2 class="qodef-m-info-list-title"><span data-lang="en" class="active">Tokenomics</span><span data-lang="ru">Токеномика</span></h2>
 				<p class="qodef-m-info-list-text">Be $LGTB</p>
 		<ul class="qodef-m-info-list-content">
 			<li class="qodef-m-info-list-item">
-							<h4 class="qodef-m-info-title">Mint Auth</h4>
-										<p class="qodef-m-info-subtitle">REVOKED</p>
+							<h4 class="qodef-m-info-title"><span data-lang="en" class="active">Mint Auth</span><span data-lang="ru">Авторизация минта</span></h4>
+										<p class="qodef-m-info-subtitle"><span data-lang="en" class="active">REVOKED</span><span data-lang="ru">ОТОЗВАНА</span></p>
 					</li>
 			<li class="qodef-m-info-list-item">
-							<h4 class="qodef-m-info-title">Launching</h4>
+							<h4 class="qodef-m-info-title"><span data-lang="en" class="active">Launching</span><span data-lang="ru">Запуск</span></h4>
 										<p class="qodef-m-info-subtitle">Stonks Labs</p>
 					</li>
 			<li class="qodef-m-info-list-item">
-							<h4 class="qodef-m-info-title">Total Supply</h4>
-										<p class="qodef-m-info-subtitle">1 BILLION</p>
+							<h4 class="qodef-m-info-title"><span data-lang="en" class="active">Total Supply</span><span data-lang="ru">Общее предложение</span></h4>
+										<p class="qodef-m-info-subtitle"><span data-lang="en" class="active">1 BILLION</span><span data-lang="ru">1 МИЛЛИАРД</span></p>
 					</li>
 		</ul>
 </div>
@@ -426,21 +494,21 @@ img.emoji {
 								<div class="elementor-element elementor-element-14c50cb elementor-widget-tablet__width-inherit elementor-widget elementor-widget-eldon_core_info_list" data-id="14c50cb" data-element_type="widget" data-widget_type="eldon_core_info_list.default">
 				<div class="elementor-widget-container">
 			<div class="qodef-shortcode qodef-m  qodef-info-list">
-			<h2 class="qodef-m-info-list-title">Roadmap</h2>
-				<p class="qodef-m-info-list-text">Be $LGTB</p>
+			<h2 class="qodef-m-info-list-title"><span data-lang="en" class="active">Roadmap</span><span data-lang="ru">Дорожная карта</span></h2>
+				<p class="qodef-m-info-list-text"><span data-lang="en" class="active">Be $LGTB</span><span data-lang="ru">Будь $LGTB</span></p>
 		<ul class="qodef-m-info-list-content">
 			
 			<li class="qodef-m-info-list-item">
-							<h4 class="qodef-m-info-title">Q2 2026</h4>
-										<p class="qodef-m-info-subtitle">MOON</p>
+							<h4 class="qodef-m-info-title"><span data-lang="en" class="active">Q2 2026</span><span data-lang="ru">2 квартал 2026</span></h4>
+										<p class="qodef-m-info-subtitle"><span data-lang="en" class="active">MOON</span><span data-lang="ru">ЛУНА</span></p>
 					</li>
 			<li class="qodef-m-info-list-item">
-							<h4 class="qodef-m-info-title">Q3 2026</h4>
-										<p class="qodef-m-info-subtitle">MARS</p>
+							<h4 class="qodef-m-info-title"><span data-lang="en" class="active">Q3 2026</span><span data-lang="ru">3 квартал 2026</span></h4>
+										<p class="qodef-m-info-subtitle"><span data-lang="en" class="active">MARS</span><span data-lang="ru">МАРС</span></p>
 					</li>
 			<li class="qodef-m-info-list-item">
-							<h4 class="qodef-m-info-title">Q4 2026</h4>
-										<p class="qodef-m-info-subtitle">ANOTHER GALAXY</p>
+							<h4 class="qodef-m-info-title"><span data-lang="en" class="active">Q4 2026</span><span data-lang="ru">4 квартал 2026</span></h4>
+										<p class="qodef-m-info-subtitle"><span data-lang="en" class="active">ANOTHER GALAXY</span><span data-lang="ru">ДРУГАЯ ГАЛАКТИКА</span></p>
 					</li>
 		</ul>
 </div>
@@ -461,9 +529,9 @@ img.emoji {
 		<div class="qodef-e qodef-grid-item">
 	<div class="qodef-e-inner">
 				<div class="qodef-e-content">
-							<h3 itemprop="description" class="qodef-e-text">I&#039;m not GAY, that&#039;s a rumor started by all the guys i slept with </h3>
+							<h3 itemprop="description" class="qodef-e-text"><span data-lang-block="en" class="active">I&#039;m not GAY, that&#039;s a rumor started by all the guys i slept with</span><span data-lang-block="ru">Я не ГЕЙ, это слух, распространённый всеми парнями, с которыми я спал</span></h3>
 				<div class="qodef-e-author">
-		<span class="qodef-e-author-name">Dev $LGTB</span>
+		<span class="qodef-e-author-name"><span data-lang="en" class="active">Dev $LGTB</span><span data-lang="ru">Разработчик $LGTB</span></span>
 	</div>
 			</div>
 	</div>
@@ -499,20 +567,20 @@ img.emoji {
 			</div>						</div>
 											<div class="qodef-grid-item">
 							<a href="https://t.me/">
-								<div id="text-7" class="widget widget_text" data-area="qodef-footer-top-area-column-2"> 	<div class="textwidget"><p>TELEGRAM</p>
+								<div id="text-7" class="widget widget_text" data-area="qodef-footer-top-area-column-2"> 	<div class="textwidget"><p><span data-lang="en" class="active">TELEGRAM</span><span data-lang="ru">ТЕЛЕГРАМ</span></p>
 						</a>
 </div>
 		</div>						</div>
 											<div class="qodef-grid-item">
 												<a href="https://x.com/
 												">
-							<div id="text-8" class="widget widget_text" data-area="qodef-footer-top-area-column-3">			<div class="textwidget"><p>TWITTER</p>
+							<div id="text-8" class="widget widget_text" data-area="qodef-footer-top-area-column-3">			<div class="textwidget"><p><span data-lang="en" class="active">TWITTER</span><span data-lang="ru">ТВИТТЕР</span></p>
 							</a>
 </div>
 		</div>						</div>
 											<div class="qodef-grid-item">
 							<div id="block-17" class="widget widget_block" data-area="qodef-footer-top-area-column-4">
-<div class="wp-block-qi-blocks-advanced-text qodef-block-container qodef-widget-block-410e5963"><div class="qi-block-advanced-text qodef-block qodef-m"><p>Token Address :<br>SOON</p></div></div>
+<div class="wp-block-qi-blocks-advanced-text qodef-block-container qodef-widget-block-410e5963"><div class="qi-block-advanced-text qodef-block qodef-m"><p><span data-lang="en" class="active">Token Address :</span><span data-lang="ru">Адрес токена:</span><br><span data-lang="en" class="active">SOON</span><span data-lang="ru">СКОРО</span></p></div></div>
 </div>						</div>
 									</div>
 			</div>
@@ -687,8 +755,47 @@ var qodefElementorGlobal = {"vars":{"elementorSectionHandler":[],"elementorColum
 
 		if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
 	</script>
-<div id="eldon-core-page-inline-style" data-style=".qodef-custom-font-972 .qodef-m-title--emphasized { font-weight: 100;}.qodef-custom-font-209 .qodef-m-title--emphasized { font-weight: 200;}@media only screen and (max-width: 680px){.qodef-custom-font-972 .qodef-custom-font-content { font-size: 50px!important;line-height: 52px!important;}}"></div></body>
+<div id="eldon-core-page-inline-style" data-style=".qodef-custom-font-972 .qodef-m-title--emphasized { font-weight: 100;}.qodef-custom-font-209 .qodef-m-title--emphasized { font-weight: 200;}@media only screen and (max-width: 680px){.qodef-custom-font-972 .qodef-custom-font-content { font-size: 50px!important;line-height: 52px!important;}}"></div>
+
+<script>
+// Función para cambiar el idioma
+function switchLanguage(lang) {
+	// Guardar preferencia en localStorage
+	localStorage.setItem('preferredLanguage', lang);
+	
+	// Actualizar atributo lang del HTML
+	document.documentElement.lang = lang === 'en' ? 'en-US' : 'ru';
+	
+	// Ocultar todos los elementos de idioma
+	document.querySelectorAll('[data-lang]').forEach(el => {
+		el.classList.remove('active');
+	});
+	document.querySelectorAll('[data-lang-block]').forEach(el => {
+		el.classList.remove('active');
+	});
+	
+	// Mostrar elementos del idioma seleccionado
+	document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
+		el.classList.add('active');
+	});
+	document.querySelectorAll('[data-lang-block="' + lang + '"]').forEach(el => {
+		el.classList.add('active');
+	});
+	
+	// Actualizar botones
+	document.querySelectorAll('.language-selector button').forEach(btn => {
+		btn.classList.remove('active');
+	});
+	document.getElementById('btn-' + lang).classList.add('active');
+}
+
+// Cargar idioma preferido al inicio
+window.addEventListener('DOMContentLoaded', function() {
+	const preferredLang = localStorage.getItem('preferredLanguage') || 'en';
+	switchLanguage(preferredLang);
+});
+</script>
+
+</body>
 
 </html>
-
-
